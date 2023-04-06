@@ -240,6 +240,17 @@ footer a {
 }
 
 
+/* For wide screens  */
+
+@media (min-width: 1441px) {
+  body {
+    background-position: -61.5% 198%, 150% -145%;
+    background-size: 75%, 75%;
+  }
+}
+
+
+
 /* For Desktop */
 
 @media (min-width: 400px) {
@@ -252,6 +263,12 @@ footer a {
   }
   .profile-stats {
     padding: 1.4rem 3.4rem 1.4rem 3rem;
+  }
+}
+@media (max-width: 399px) {
+  body {
+    background-position: -180px top, 100px bottom;
+    background-size: 400px, 400px;
   }
 }
 
