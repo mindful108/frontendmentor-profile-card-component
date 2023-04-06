@@ -78,18 +78,18 @@ live in browser */
   position: absolute;
   opacity: 0.4;
   z-index: 1;
-  display: none;
   /* top: 10px; */
+  display: none;
 }
 
 .template-desktop {
   width: 1440px; /* Adjust to image dimensions */
   height: 720px; /* Adjust to image dimensions */
   position: absolute;
-  opacity: 1;
+  opacity: .5;
   z-index: 99;
   /* top: 10px; */
-  /* display: none; */
+  display: none;
 }
 
 /* ================ */
@@ -132,28 +132,8 @@ body {
   background-image: url(images/bg-pattern-top.svg),
     url(images/bg-pattern-bottom.svg);
   /* background-position: -285px -510px, 692px 375px; */
-  background-position: -61.5% 198%, 692px 375px;
-  /* background-position: left top, right bottom ; */
+  background-position: -61.5% 198%, 150% -145%;
   background-repeat: no-repeat;
-}
-
-.bg-image--top,
-.bg-image--bottom {
-  position: absolute;
-  z-index: -1;
-  display: none;
-}
-
-.bg-image--top {
-  top: 0;
-  left: 0;
-  transform: translate(-50%, -50%);
-}
-
-.bg-image--bottom {
-  bottom: 0;
-  right: 0;
-  transform: translate(50%, 50%);
 }
 
 .card {
@@ -253,23 +233,35 @@ footer a {
 /* Media Queries */
 /* ================ */
 
-@media (min-width: 400px) {
-  .card {
-    width: 350px;
-  }
-}
-
 @media (min-height: 600px) {
   body {
     height: 100vh;
   }
 }
 
+
+/* For Desktop */
+
+@media (min-width: 400px) {
+  body {
+    width: 100vw;
+    height: 100vh;
+  }
+  .card {
+    width: 350px;
+  }
+  .profile-stats {
+    padding: 1.4rem 3.4rem 1.4rem 3rem;
+  }
+}
+
+
+/* For smaller screens */
+
 @media (max-width: 320px) {
   .profile-stats {
     flex-direction: column;
-    justify-content: space-between;
-    padding: 1.4rem 2.75rem;
+    padding: 1.4rem 2.75rem .75rem;
   }
   .stats-group {
     margin-bottom: 1rem;

@@ -16,9 +16,6 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
     - [Continued development](#continued-development)
     - [Useful resources](#useful-resources)
   - [Author](#author)
-  - [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -28,24 +25,21 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
 
 ### Screenshots
 
-Desktop
-![Screenshot Desktop](screenshot-desktop.jpg)
-
-Mobile
-![Screenshot Desktop](screenshot-mobile.jpg)
+Desktop & Mobile
+![Screenshot Desktop](screenshot.jpg)
 
 
 ### Links
 
-- [Solution code on Github](https://github.com/mindful108/frontendmentor-qr-code-component.git)
-- [Live solution](https://frontendmentor-qr-code-component-sigma.vercel.app)
+- [Solution code on Github](https://github.com/mindful108/frontendmentor-profile-card-component.git)
+- [Live solution](https://frontendmentor-profile-card-component-orcin.vercel.app)
 
 ## My process
 
 ### Built with
 
 - Semantic HTML5 markup
-- CSS with custom properties (variables)
+- CSS with custom variables
 - Flexbox
 - Mobile-first workflow
 
@@ -81,8 +75,3 @@ I used this [MDN doc on CSS background images](https://developer.mozilla.org/en-
 
 - Website - [Judah Lynn](https://judahlynn.com)
 - Frontend Mentor - [@mindful108](https://www.frontendmentor.io/profile/mindful108)
-
-
-## Acknowledgments
-
-ADD...
