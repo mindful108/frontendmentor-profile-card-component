@@ -1,0 +1,283 @@
+/* ================ */
+/* Reset */
+/* ================ */
+
+/* https://piccalil.li/blog/a-modern-css-reset/ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: normal;
+}
+
+body {
+  position: relative;
+  /* SEE MORE BELOW */
+}
+
+ul {
+  list-style: none;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ================ */
+/* Design Templates
+Used to refine designs 
+live in browser */
+/* ================ */
+
+.template-mobile {
+  width: 375px; /* Adjust to image dimensions */
+  height: 667px; /* Adjust to image dimensions */
+  position: absolute;
+  opacity: 0.4;
+  z-index: 1;
+  display: none;
+  /* top: 10px; */
+}
+
+.template-desktop {
+  width: 1440px; /* Adjust to image dimensions */
+  height: 720px; /* Adjust to image dimensions */
+  position: absolute;
+  opacity: 1;
+  z-index: 99;
+  /* top: 10px; */
+  /* display: none; */
+}
+
+/* ================ */
+/* Global Variables */
+/* ================ */
+
+:root {
+  --colorWhite: #fff;
+  --darkCyan: hsl(185, 75%, 39%);
+  --veryDarkDesaturatedBlue: hsl(229, 23%, 23%);
+  --darkGrayishBlue: hsl(227, 10%, 46%);
+  --darkGray: hsl(0, 0%, 59%);
+}
+
+/* ================ */
+/* Custom Fonts
+font-family: 'Big Shoulders Display', display;
+font-family: 'Outfit', sans-serif;
+ */
+
+/* ================ */
+/* Styles */
+/* ================ */
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  line-height: 1.5;
+  font-size: 16px;
+  height: auto;
+  height: 100vh;
+  font-family: 'Kumbh Sans', sans-serif;
+  padding: 1.5rem;
+}
+
+body {
+  background-color: var(--darkCyan);
+  background-image: url(images/bg-pattern-top.svg),
+    url(images/bg-pattern-bottom.svg);
+  /* background-position: -285px -510px, 692px 375px; */
+  background-position: -61.5% 198%, 692px 375px;
+  /* background-position: left top, right bottom ; */
+  background-repeat: no-repeat;
+}
+
+.bg-image--top,
+.bg-image--bottom {
+  position: absolute;
+  z-index: -1;
+  display: none;
+}
+
+.bg-image--top {
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+
+.bg-image--bottom {
+  bottom: 0;
+  right: 0;
+  transform: translate(50%, 50%);
+}
+
+.card {
+  position: relative;
+  background: white;
+  width: 325px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+  height: 140px;
+  background: var(--darkCyan) url(images/bg-pattern-card.svg);
+}
+.profile-image {
+  position: absolute;
+  top: 87px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 100%;
+  border: 5px solid var(--colorWhite);
+}
+
+.card-content {
+  margin-top: 71px;
+  letter-spacing: 0.5px;
+}
+
+.profile-content {
+  text-align: center;
+}
+
+h1 {
+  margin: 0 0 0.35rem;
+  font-weight: 700;
+  font-size: 17px;
+}
+
+.profile-age {
+  font-weight: 400;
+  margin-left: 0.25rem;
+}
+
+.profile-location {
+  font-size: 13px;
+}
+
+.profile-stats {
+  border-top: 1px solid #d9d9d9;
+  letter-spacing: 1px;
+  margin-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.4rem 2.75rem;
+}
+
+.stats-group {
+  text-align: center;
+  line-height: 1.6;
+}
+
+.stats-number {
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.stats-type {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+}
+
+/* =============== */
+/* ATTRIBUTION */
+/* =============== */
+
+footer {
+  position: absolute;
+  bottom: 0;
+  padding: 1.5rem;
+  font-size: 0.8rem;
+  opacity: 1;
+  line-height: 1.8;
+  text-align: center;
+  color: #999;
+}
+
+footer a {
+  /* attribution*/
+  font-weight: 900;
+  color: var(--darkCyan);
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}
+
+/* ================ */
+/* Media Queries */
+/* ================ */
+
+@media (min-width: 400px) {
+  .card {
+    width: 350px;
+  }
+}
+
+@media (min-height: 600px) {
+  body {
+    height: 100vh;
+  }
+}
+
+@media (max-width: 320px) {
+  .profile-stats {
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.4rem 2.75rem;
+  }
+  .stats-group {
+    margin-bottom: 1rem;
+  }
+  .stats-number {
+    font-size: 1.25rem;
+  }
+  .stats-type {
+    font-size: .8rem;
+  }
+}
