@@ -66,31 +66,6 @@ select {
   }
 }
 
-/* ================ */
-/* Design Templates
-Used to refine designs 
-live in browser */
-/* ================ */
-
-.template-mobile {
-  width: 375px; /* Adjust to image dimensions */
-  height: 667px; /* Adjust to image dimensions */
-  position: absolute;
-  opacity: 0.4;
-  z-index: 1;
-  /* top: 10px; */
-  display: none;
-}
-
-.template-desktop {
-  width: 1440px; /* Adjust to image dimensions */
-  height: 720px; /* Adjust to image dimensions */
-  position: absolute;
-  opacity: .5;
-  z-index: 99;
-  /* top: 10px; */
-  display: none;
-}
 
 /* ================ */
 /* Global Variables */
@@ -115,16 +90,15 @@ font-family: 'Outfit', sans-serif;
 /* ================ */
 
 body {
+  position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
-  line-height: 1.5;
-  font-size: 16px;
   height: auto;
-  height: 100vh;
-  font-family: 'Kumbh Sans', sans-serif;
   padding: 1.5rem;
+  font-size: 16px;
+  font-family: 'Kumbh Sans', sans-serif;
 }
 
 body {
@@ -139,7 +113,8 @@ body {
 .card {
   position: relative;
   background: white;
-  width: 325px;
+  max-width: 350px;
+  width: 85%;
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.2);
@@ -211,20 +186,20 @@ h1 {
 /* =============== */
 
 footer {
-  position: absolute;
-  bottom: 0;
-  padding: 1.5rem;
+  position: relative;
   font-size: 0.8rem;
-  opacity: 1;
-  line-height: 1.8;
+  opacity: .75;
+  line-height: 1.6;
   text-align: center;
-  color: #999;
+  color: var(--veryDarkDesaturatedBlue);
+  padding-top: 5rem;
+  /* bottom: auto; */
 }
 
 footer a {
   /* attribution*/
   font-weight: 900;
-  color: var(--darkCyan);
+  color: var(--colorWhite);
   text-decoration: none;
   letter-spacing: 0.5px;
 }
@@ -233,49 +208,30 @@ footer a {
 /* Media Queries */
 /* ================ */
 
-@media (min-height: 600px) {
+@media (min-height: 705px) {
   body {
     height: 100vh;
   }
-}
-
-
-/* For wide screens  */
-
-@media (min-width: 1441px) {
-  body {
-    background-position: -61.5% 198%, 150% -145%;
-    background-size: 75%, 75%;
+  footer {
+    position: absolute;
+    bottom: 2rem;
   }
 }
-
-
-
-/* For Desktop */
-
-@media (min-width: 400px) {
-  body {
-    width: 100vw;
-    height: 100vh;
-  }
-  .card {
-    width: 350px;
-  }
-  .profile-stats {
-    padding: 1.4rem 3.4rem 1.4rem 3rem;
-  }
-}
-@media (max-width: 399px) {
-  body {
-    background-position: -180px top, 100px bottom;
-    background-size: 400px, 400px;
-  }
-}
-
 
 /* For smaller screens */
 
-@media (max-width: 320px) {
+@media (max-width: 234px) {
+    body {
+      padding-left: .75rem;
+      padding-right: .75rem;
+    }
+  
+}
+
+@media (max-width: 344px) {
+  .card {
+    width: 100%;
+  }
   .profile-stats {
     flex-direction: column;
     padding: 1.4rem 2.75rem .75rem;
@@ -290,3 +246,29 @@ footer a {
     font-size: .8rem;
   }
 }
+/* For wide screens  */
+@media (min-width: 1441px) {
+  body {
+    background-position: -61.5% 198%, 150% -145%;
+    background-size: 75%, 75%;
+  }
+}
+
+/* For Desktop */
+@media (min-width: 400px) {
+  /* .card {
+    width: 350px;
+  } */
+  .profile-stats {
+    padding: 1.4rem 3.4rem 1.4rem 3rem;
+  }
+}
+
+/* Background images on mobile */
+@media (max-width: 399px) {
+  body {
+    background-position: -180px top, 100px bottom;
+    background-size: 400px, 400px;
+  }
+}
+
